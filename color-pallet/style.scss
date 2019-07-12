@@ -1,0 +1,112 @@
+$colorBrand: #1f3044;
+$colorDark: #22262f;
+$colorDarkAccent: #646c79;
+$colorLight: #dfe1da;
+$colorLightAccent: #fb9039;
+$colorFontPrimary: #f5f5f5;
+$colorFontSecondary: #333;
+
+@mixin colorCombo($bgColor, $fontColor) {
+    background-color: $bgColor;
+    color: $fontColor;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    @include colorCombo($colorLight, $colorFontSecondary);
+
+    .header {
+        position: fixed;
+        top: 0;
+        height: 10vh;
+        width: 100vw;
+        line-height: 10vh;
+        text-align: center;
+        font-size: 30px;
+
+        @include colorCombo($colorBrand, $colorFontPrimary);
+    }
+
+    .main {
+        margin: 0 auto;
+
+        .palletContainer {
+            width: 100vw;
+            height: 20vh;
+            line-height: 100vh;
+            /* position: fixed;
+            bottom: 5vh; */
+
+            .colorStrip {
+                display: inline-block;
+                height: 30vh;
+                width: 19.5%;
+                line-height: 30vh;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
+                    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
+                    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+                &.strip1 {
+                    @include colorCombo($colorBrand, $colorFontPrimary);
+                }
+
+                &.strip2 {
+                    @include colorCombo($colorDark, $colorFontPrimary);
+                }
+
+                &.strip3 {
+                    @include colorCombo($colorDarkAccent, $colorFontSecondary);
+                }
+
+                &.strip4 {
+                    @include colorCombo($colorLight, $colorFontSecondary);
+                }
+
+                &.strip5 {
+                    @include colorCombo($colorLightAccent, $colorFontPrimary);
+                }
+            }
+        }
+
+        .floatingButton {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 7vh;
+            right: 7vh;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 24px;
+
+            @include colorCombo($colorLightAccent, $colorFontPrimary);
+        }
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        height: 5vh;
+        width: 100vw;
+        line-height: 5vh;
+        text-align: center;
+        font-size: 30px;
+
+        @include colorCombo($colorDark, $colorFontPrimary);
+    }
+}
