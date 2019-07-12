@@ -5,7 +5,7 @@
 const SANDBOX_URL = 'https://sandbox.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 const PRO_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 const DEV_KEY = 'f1fdbebf-0d33-4134-8a1d-7963b02958ad';
-const IS_DEV = window.location.hostname === '0.0.0.0';
+const IS_DEV = true || window.location.hostname === '0.0.0.0'; // to use server to fetch real data
 
 const fetchCoinData = () => {
     const request = new Request(PRO_URL, {
