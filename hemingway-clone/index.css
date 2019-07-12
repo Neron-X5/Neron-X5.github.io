@@ -1,0 +1,70 @@
+.adverb {
+    background: #c4e3f3;
+}
+
+.qualifier {
+    background: #c4e3f3;
+}
+
+.passive {
+    background: #c4ed9d;
+}
+
+.complex {
+    background: #e3b7e8;
+}
+
+.hardSentence {
+    background: #f7ecb5;
+}
+
+.veryHardSentence {
+    background: #e4b9b9;
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#text-area,
+#output {
+    width: 100%;
+    border: 1px solid #808080;
+    /* margin: 10px; */
+    padding: 5px;
+}
+
+#left {
+    width: 75%;
+    position: absolute;
+    left: 2%;
+}
+
+#right {
+    width: 20%;
+    position: absolute;
+    right: 2%;
+}
+
+.counter {
+    position: relative;
+    padding: 5%;
+    margin: 5% 0 0 5%;
+    border-radius: 8px;
+}
+
+button {
+    width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
