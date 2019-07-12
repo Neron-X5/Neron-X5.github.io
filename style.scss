@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap');
+
+$fontPageTitle: 'Nova Flat', Tahoma, cursive;
+$ontPageBody: 'Open Sans', Tahoma, sans-serif;
+$colorBrand: #1f3044;
+$colorDark: #22262f;
+$colorDarkAccent: #646c79;
+$colorLight: #dfe1da;
+$colorLightAccent: #fb9039;
+$colorFontPrimary: #f5f5f5;
+$colorFontSecondary: #333;
+$defaultMargin: 20px;
+
+@mixin colorCombo($bgColor, $fontColor) {
+    background-color: $bgColor;
+    color: $fontColor;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+    font-family: $ontPageBody;
+
+    @include colorCombo($colorLight, $colorFontSecondary);
+
+    .pageHeader {
+        width: 100vw;
+        padding: 30px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+
+        @include colorCombo($colorBrand, $colorFontPrimary);
+
+        .pageTitle {
+            font-family: $fontPageTitle;
+        }
+    }
+
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+
+        a {
+            margin: $defaultMargin;
+            padding: 1em 1.5em;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+            max-height: 50px;
+            -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
+                0 8px 10px -5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
+                0 8px 10px -5px rgba(0, 0, 0, 0.2);
+            border-radius: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+
+            @include colorCombo($colorDarkAccent, $colorFontPrimary);
+
+            &:hover {
+                cursor: pointer;
+                -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+                @include colorCombo($colorBrand, $colorFontPrimary);
+            }
+
+            &:active {
+                top: 5px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:last-child {
+                margin-bottom: 50px;
+            }
+
+            @media (max-width: 1024px) {
+                margin: $defaultMargin auto;
+            }
+        }
+    }
+
+    .pageFooter {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        padding: 7px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+
+        @include colorCombo($colorDark, $colorFontPrimary);
+
+        .footerContent {
+            font-family: $fontPageTitle;
+        }
+    }
+}
