@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,900&display=swap');
+
+$pageTitleFont: 'Nova Flat', Tahoma, cursive;
+$pageFont: 'Open Sans', Tahoma, sans-serif;
+$numberFont: 'Source Code Pro', monospace;
+$primaryThemeColor: #062f4f;
+$secondaryThemeColor: #d5d5d5;
+$primaryFontColor: #f5f5f5;
+$secondaryFontColor: #333;
+$borderColor: #d3d3d3;
+$positiveColor: #21bea5;
+$negativeColor: #db3019;
+$neutralColor: #4b8dbe;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $pageFont;
+    color: $secondaryFontColor;
+
+    .pageHeader {
+        text-align: center;
+        padding: 30px;
+        width: 100vw;
+        background-color: $primaryThemeColor;
+        font-size: 30px;
+        font-weight: 800;
+
+        .pageTitle {
+            font-family: $pageTitleFont;
+            color: $primaryFontColor;
+        }
+    }
+
+    .mainContainer {
+        min-height: 100vh;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: $secondaryThemeColor;
+        // height: calc(100% - 96px);
+
+        .listContainer {
+            width: 100%;
+            padding-bottom: 50px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            .card {
+                background-color: $primaryFontColor;
+                -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 2px;
+                padding: 20px;
+                margin-bottom: 10px;
+
+                &:hover {
+                    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                }
+
+                .cardMain {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $borderColor;
+
+                    .coinLogo {
+                        display: inline-block;
+                        background-color: $primaryThemeColor;
+                        border-radius: 50%;
+                        height: 50px;
+                        width: 50px;
+                        margin-right: 20px;
+                    }
+
+                    .cardInfo {
+                        display: inline-block;
+                        position: absolute;
+                        margin-top: 15px;
+
+                        .coinName {
+                            width: 150px;
+                            margin-right: 20px;
+
+                            .coinSymbol {
+                                font-weight: 800;
+                            }
+                        }
+
+                        .coinPrice {
+                            font-family: $numberFont;
+                            font-weight: 900;
+                        }
+                    }
+                }
+
+                .cardData {
+                    padding: 10px 0;
+                    font-family: $numberFont;
+                    font-weight: 600;
+
+                    .dayData {
+                        float: left;
+                    }
+
+                    .weekData {
+                        float: right;
+                    }
+
+                    .positive {
+                        color: $positiveColor;
+                    }
+
+                    .negative {
+                        color: $negativeColor;
+                    }
+
+                    .neutral {
+                        color: $neutralColor;
+                    }
+                }
+            }
+        }
+    }
+}
