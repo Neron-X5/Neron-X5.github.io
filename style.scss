@@ -71,6 +71,10 @@ body {
             text-decoration: none;
             text-transform: uppercase;
             text-align: center;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             font-weight: 600;
 
             @include colorCombo($colorDarkAccent, $colorFontPrimary);
@@ -93,6 +97,16 @@ body {
 
             &:last-child {
                 margin-bottom: 50px;
+            }
+
+            &.pending,
+            &.pending:hover {
+                cursor: not-allowed;
+                opacity: 0.5;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+
+                @include colorCombo($colorDarkAccent, $colorFontSecondary);
             }
 
             @media (max-width: 1024px) {
