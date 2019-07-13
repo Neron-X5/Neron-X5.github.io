@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Simple tile swapping game" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="viewport" content="width=device-width, maximum-scale=0.5" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Tile swap v3</title>
+    </head>
+    <body>
+        <div class="meta">
+            <p>Get the tiles in order from 0 to 8. <br />Board size is: <span id="board-size"></span></p>
+            <p>You have a total of: <span id="total-tiles"></span></p>
+            <p>My tile is: <span id="my-tile"></span></p>
+            <p>My tile index pos is: <span id="my-tile-pos"></span></p>
+            <p>Blank tile index pos is: <span id="blank-tile-pos"></span></p>
+            <p>Are they sorted?: <span id="ask-sorted"></span></p>
+
+            <p>The current array: <span id="shuffled-tiles"></span></p>
+        </div>
+        <section id="board"></section>
+        <input class="reset" type="button" value="Start Again" onClick="window.location.reload()" />
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
