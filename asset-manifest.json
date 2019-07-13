@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/number-grid/static/css/main.878d7b64.chunk.css",
+    "main.js": "/number-grid/static/js/main.f37d85f2.chunk.js",
+    "main.js.map": "/number-grid/static/js/main.f37d85f2.chunk.js.map",
+    "runtime~main.js": "/number-grid/static/js/runtime~main.f55fe653.js",
+    "runtime~main.js.map": "/number-grid/static/js/runtime~main.f55fe653.js.map",
+    "static/js/2.3310f33a.chunk.js": "/number-grid/static/js/2.3310f33a.chunk.js",
+    "static/js/2.3310f33a.chunk.js.map": "/number-grid/static/js/2.3310f33a.chunk.js.map",
+    "index.html": "/number-grid/index.html",
+    "precache-manifest.b228bef97a040e4217459dc5bd905179.js": "/number-grid/precache-manifest.b228bef97a040e4217459dc5bd905179.js",
+    "service-worker.js": "/number-grid/service-worker.js",
+    "static/css/main.878d7b64.chunk.css.map": "/number-grid/static/css/main.878d7b64.chunk.css.map"
+  }
+}
