@@ -1,16 +1,16 @@
-$colorBrand: #1f3044: Pickled Bluewood
+$colorBrand: #40698E: Kashmir Blue
 This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity.
 
-$colorDark: #22262f: Charade
+$colorDark: #1E2833: Mirage
 Use as the text color for dark-on-light designs, or as the background for inverted designs.
 
-$colorDarkAccent: #646c79: Shuttle Gray
+$colorDarkAccent: #2A4054: Pickled Bluewood
 Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
 
-$colorLight: #dfe1da: Quill Gray
+$colorLight: #E5E7EE: Athens Gray
 Use this color as the background for your dark-on-light designs, or the text color of an inverted design.
 
-$colorLightAccent: #fb9039: Neon Carrot
+$colorLightAccent: #CBD5E0: Geyser
 Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
 
 $colorFontPrimary: #f5f5f5;

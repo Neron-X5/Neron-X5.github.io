@@ -1,8 +1,20 @@
-$colorBrand: #1f3044;
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap');
+
+$fontPageTitle: 'Nova Flat', Tahoma, cursive;
+$ontPageBody: 'Open Sans', Tahoma, sans-serif;
+
+$colorBrand: #40698e;
+$colorDark: #1e2833;
+$colorDarkAccent: #2a4054;
+$colorLight: #e5e7ee;
+$colorLightAccent: #cbd5e0;
+/* $colorBrand: #1f3044;
 $colorDark: #22262f;
 $colorDarkAccent: #646c79;
 $colorLight: #dfe1da;
-$colorLightAccent: #fb9039;
+$colorLightAccent: #fb9039; */
+
 $colorFontPrimary: #f5f5f5;
 $colorFontSecondary: #333;
 
@@ -17,6 +29,7 @@ $colorFontSecondary: #333;
     border: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: $ontPageBody;
 }
 
 body {
@@ -32,7 +45,9 @@ body {
         width: 100vw;
         line-height: 10vh;
         text-align: center;
-        font-size: 30px;
+        font-size: 36px;
+        font-weight: 800;
+        letter-spacing: 0.0625em;
 
         @include colorCombo($colorBrand, $colorFontPrimary);
     }
@@ -44,8 +59,6 @@ body {
             width: 100vw;
             height: 20vh;
             line-height: 100vh;
-            /* position: fixed;
-            bottom: 5vh; */
 
             .colorStrip {
                 display: inline-block;
@@ -53,8 +66,8 @@ body {
                 width: 19.5%;
                 line-height: 30vh;
                 text-align: center;
-                font-size: 18px;
-                font-weight: bold;
+                font-size: 24px;
+                font-weight: 600;
                 -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
                     0 8px 10px -5px rgba(0, 0, 0, 0.2);
                 box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
@@ -69,7 +82,7 @@ body {
                 }
 
                 &.strip3 {
-                    @include colorCombo($colorDarkAccent, $colorFontSecondary);
+                    @include colorCombo($colorDarkAccent, $colorFontPrimary);
                 }
 
                 &.strip4 {
@@ -77,7 +90,7 @@ body {
                 }
 
                 &.strip5 {
-                    @include colorCombo($colorLightAccent, $colorFontPrimary);
+                    @include colorCombo($colorLightAccent, $colorFontSecondary);
                 }
             }
         }
@@ -94,7 +107,7 @@ body {
             font-weight: bolder;
             font-size: 24px;
 
-            @include colorCombo($colorLightAccent, $colorFontPrimary);
+            @include colorCombo($colorDarkAccent, $colorFontPrimary);
         }
     }
 
