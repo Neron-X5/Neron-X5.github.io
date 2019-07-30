@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap');
 
 $fontPageTitle: 'Nova Flat', Tahoma, cursive;
-$ontPageBody: 'Open Sans', Tahoma, sans-serif;
+$fontPageBody: 'Open Sans', Tahoma, sans-serif;
 
 $colorBrand: #40698e;
 $colorDark: #1e2833;
@@ -19,6 +19,13 @@ $defaultMargin: 20px;
     color: $fontColor;
 }
 
+@mixin shadow($depth) {
+    -webkit-box-shadow: 0 0 ($depth * 8px) 0 rgba(0, 0, 0, 0.2),
+        ($depth * 2px) ($depth * 4px) ($depth * 4px) 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 ($depth * 8px) 0 rgba(0, 0, 0, 0.2),
+        ($depth * 2px) ($depth * 4px) ($depth * 4px) 0 rgba(0, 0, 0, 0.25);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +33,14 @@ $defaultMargin: 20px;
     box-sizing: border-box;
 }
 
+:focus {
+    outline: none;
+}
+
 body {
     height: 100vh;
     text-rendering: optimizeLegibility;
-    font-family: $ontPageBody;
+    font-family: $fontPageBody;
 
     @include colorCombo($colorLight, $colorFontSecondary);
 
@@ -77,10 +88,6 @@ body {
             -ms-flex: 0 0 300px;
             flex: 0 0 300px;
             max-height: 50px;
-            -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
-                0 8px 10px -5px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12),
-                0 8px 10px -5px rgba(0, 0, 0, 0.2);
             border-radius: 2px;
             text-decoration: none;
             text-transform: uppercase;
@@ -92,33 +99,36 @@ body {
             font-weight: 600;
 
             @include colorCombo($colorBrand, $colorFontPrimary);
+            @include shadow(1);
 
-            &:hover {
+            &:hover,
+            &:focus {
                 cursor: pointer;
-                -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                -webkit-transform: scale(1.04) translate3d(0, 0, 0);
+                transform: scale(1.04) translate3d(0, 0, 0);
 
                 @include colorCombo($colorDark, $colorFontPrimary);
+                @include shadow(2);
             }
 
             &:active {
                 top: 5px;
             }
 
-            &:focus {
-                outline: none;
-            }
-
             &:last-child {
-                margin-bottom: 50px;
+                margin-bottom: 150px;
             }
 
             &.pending,
-            &.pending:hover {
+            &.pending:hover,
+            &.pending:focus {
                 cursor: not-allowed;
                 // opacity: 0.8;
                 -webkit-box-shadow: none;
                 box-shadow: none;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none;
 
                 @include colorCombo($colorLightAccent, $colorFontSecondary);
             }
